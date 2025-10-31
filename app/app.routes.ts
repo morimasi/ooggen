@@ -7,6 +7,11 @@ export const appRoutes: Routes = [
     data: { title: 'Ana Sayfa' }
   },
   {
+    path: 'math-readiness/:preset',
+    loadComponent: () => import('./pages/math-readiness/math-readiness.component').then(m => m.MathReadinessComponent),
+    data: { title: 'Matematiğe Hazırlık' }
+  },
+  {
     path: 'math-readiness',
     loadComponent: () => import('./pages/math-readiness/math-readiness.component').then(m => m.MathReadinessComponent),
     data: { title: 'Matematiğe Hazırlık' }

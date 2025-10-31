@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoVBL5gI9kLmbG0CsdC3dJibLSxdpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <style>
       body { font-family: 'Inter', sans-serif; }
+      .font-inter { font-family: 'Inter', sans-serif; }
+      .font-lexend { font-family: 'Lexend', sans-serif; }
+      .font-comic-neue { font-family: 'Comic Neue', cursive; }
+
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #printable-area, #printable-area * {
+          visibility: visible;
+        }
+        #printable-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+      }
     </style>
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('mathgen-theme') === 'dark' || (!('mathgen-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
   <script type="importmap">
 {
   "imports": {
@@ -25,12 +53,14 @@
     "@angular/router": "https://next.esm.sh/@angular/router@^20.3.9?external=rxjs",
     "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^20.3.9?external=rxjs",
     "@angular/core/rxjs-interop": "https://next.esm.sh/@angular/core@^20.3.9/rxjs-interop?external=rxjs",
-    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.9?external=rxjs"
+    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.9?external=rxjs",
+    "@google/genai": "https://esm.run/@google/genai",
+    "@angular/forms": "https://next.esm.sh/@angular/forms@^20.3.9?external=rxjs"
   }
 }
 </script>
 </head>
-  <body class="bg-gray-100 antialiased">
+  <body class="antialiased">
     <app-root></app-root>
   </body>
 </html>

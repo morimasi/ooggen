@@ -14,6 +14,8 @@
     "@angular/router": "^20.3.9",
     "@angular/platform-browser": "^20.3.0",
     "@angular/core": "^20.3.0",
+    "@google/genai": "latest",
+    "@angular/forms": "^20.3.9",
     "@angular/build": "^20.3.0",
     "@angular/cli": "^20.3.0",
     "@angular/compiler-cli": "^20.3.0",

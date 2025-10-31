@@ -16,10 +16,10 @@ Basit Grafikler ve Veri: Veri yorumlama temelleri
 İşlemi Sözel İfade Etme: Matematiksel ifadeleri dile çevirme
 Eksik Sayıyı Bulma: Mantık ve muhakeme becerileri
 Simgelerle İşlemler: Sembol kullanımı
-Problemler (AI): Yapay zeka destekli problem çözme
+Problemler + (AI): Yapay zeka destekli problem çözme
 Problem Kurma: Öğrenci tarafından problem oluşturma
 3. Ritmik Sayma: Sayı dizileri ve patternler
-4. Ölçümler (3 Alt Modül)
+4. Ölçümler ( Alt Modül)
 Zaman Ölçme: Saat, takvim kavramları
 5. Özel Öğrenme (3 Alt Modül)
 Diskalkuli + (AI Destekli): Diskalkuli öğrencileri için özel tasarım
